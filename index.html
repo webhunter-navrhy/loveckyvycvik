@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lovecký výcvik psích plemen — výcvik a příprava k loveckým zkouškám</title>
+<meta name="description" content="Lovecký výcvik se zabývá výcvikem, cvičením a přípravou k loveckým zkouškám všech loveckých plemen. Nebušice, Hájovna Mrákavy a honitby poblíž Prahy.">
+<meta name="theme-color" content="#062A09">
+<meta property="og:title" content="Lovecký výcvik psích plemen — výcvik a příprava k loveckým zkouškám">
+<meta property="og:description" content="Lovecký výcvik se zabývá výcvikem, cvičením a přípravou k loveckým zkouškám všech loveckých plemen. Nebušice, Hájovna Mrákavy a honitby poblíž Prahy.">
+<meta property="og:image" content="assets/img/hero.jpg">
+<link rel="icon" href="assets/logo-color.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Hanken+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=862cd382">
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="./" aria-label="Lovecký výcvik — úvod"><img class="lg lg-on-dark " src="assets/logo-light.svg" alt="Lovecký výcvik psích plemen" width="120" height="125"><img class="lg lg-on-light " src="assets/logo-color.svg" alt="" aria-hidden="true" width="120" height="125"></a>
+    <ul class="nav-links"><li><a href="vycvik/">Výcvik</a></li><li><a href="rozvrh/">Rozvrh</a></li><li><a href="akce/">Kalendář akcí</a></li><li><a href="cenik/">Ceník</a></li><li><a href="klienti/">Klienti</a></li><li><a href="o-nas/">O nás</a></li><li><a href="novinky/">Novinky</a></li><li><a href="kontakt/">Kontakt</a></li></ul>
+    <div class="nav-cta">
+      <a class="btn btn--ghost" href="rozvrh/">Přihlásit se</a>
+      <a class="btn" href="registrace/">Registrace</a>
+    </div>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="drawer-menu" aria-hidden="true">
+  <ul><li><a href="vycvik/">Výcvik<small>01</small></a></li><li><a href="rozvrh/">Rozvrh<small>02</small></a></li><li><a href="akce/">Kalendář akcí<small>03</small></a></li><li><a href="cenik/">Ceník<small>04</small></a></li><li><a href="klienti/">Klienti<small>05</small></a></li><li><a href="o-nas/">O nás<small>06</small></a></li><li><a href="novinky/">Novinky<small>07</small></a></li><li><a href="kontakt/">Kontakt<small>08</small></a></li></ul>
+  <div class="drawer-foot"><a class="btn" href="registrace/">Registrace</a><a class="btn btn--ghost" href="rozvrh/">Přihlásit se</a><a class="btn btn--ghost" href="tel:+420777717271">777 717 271</a></div>
+</div>
+<main>
+
+<section class="hero">
+  <div class="hero-media"><img src="assets/img/hero.jpg" srcset="assets/img/hero-s.jpg 900w, assets/img/hero.jpg 1600w" sizes="(max-width: 767px) 100vw, 60vw" alt="Hrubosrstý ohař přináší bažanta" class="" fetchpriority="high" decoding="async"></div>
+  <div class="wrap hero-in">
+    <div>
+      <div class="hero-status fade-in" style="animation-delay:.2s"><span class="pulse"></span>Kapacita je naplněna — nové zájemce o výcvik nyní nebereme</div>
+      <h1><span class="l1">Lovecký výcvik</span><span class="l2">psích plemen</span></h1>
+      <p class="hero-lead fade-in" style="animation-delay:.9s">Výcvik, cvičení a příprava k loveckým zkouškám všech loveckých plemen. Cvičíme tak, aby byl spokojený jak páneček, tak pes — a aby byly vidět výsledky.</p>
+      <div class="hero-actions fade-in" style="animation-delay:1.05s">
+        <a class="btn" href="rozvrh/">Rozvrh cvičení <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <a class="btn btn--ghost" href="registrace/">Jak s námi začít</a>
+      </div>
+    </div>
+    <aside class="next-card fade-in" style="animation-delay:1.25s" aria-label="Nejbližší hodiny">
+      <h2>Nejbližší hodiny <a href="rozvrh/">celý rozvrh →</a></h2>
+      <div id="next-list"></div>
+      <p class="demo-note">Ukázka nového rozvrhu — termíny jsou ilustrační.</p>
+    </aside>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>Poslušnost<i></i>Aporty<i></i>Práce na barvě<i></i>Stopy<i></i>Zkoušky vloh<i></i>Podzimní zkoušky<i></i>Vodní práce<i></i>Lesní zkoušky<i></i>Norování<i></i>Výstavy<i></i>Teorie<i></i></span><span>Poslušnost<i></i>Aporty<i></i>Práce na barvě<i></i>Stopy<i></i>Zkoušky vloh<i></i>Podzimní zkoušky<i></i>Vodní práce<i></i>Lesní zkoušky<i></i>Norování<i></i>Výstavy<i></i>Teorie<i></i></span>
+</div></div>
+
+<section class="section intro">
+  <div class="wrap intro-grid">
+    <div>
+      <span class="eyebrow rv">Jak cvičíme</span>
+      <p class="intro-quote rv" style="--d:.1s"><span class="q">„</span>Cvičíme tak, aby byl spokojený jak <em>páneček, tak pes</em> a&nbsp;aby byly vidět výsledky.<span class="q">“</span></p>
+      <div class="intro-facts">
+        <div class="fact rv"><b>1997</b><span>kynologii se Zuzana Čechová věnuje od roku</span></div>
+        <div class="fact rv" style="--d:.1s"><b>2005</b><span>od tohoto roku výcvik loveckých psů</span></div>
+        <div class="fact rv" style="--d:.2s"><b>0 Kč</b><span>seznamovací procházka pro nové zájemce je zdarma</span></div>
+      </div>
+    </div>
+    <div class="intro-side">
+      <div class="intro-photo clip"><img src="assets/img/kontakt-psa.jpg" srcset="assets/img/kontakt-psa-s.jpg 900w, assets/img/kontakt-psa.jpg 1600w" sizes="(max-width: 767px) 100vw, 60vw" alt="Vůdkyně s ohařem na poli" class="" loading="lazy" decoding="async"></div>
+      <div class="intro-text rv">
+        <p>K našim svěřencům se snažíme přistupovat individuálně s přihlédnutím k povaze daného jedince i jeho majitele. Postup výcviku konzultujeme s majitelem, demonstrujeme na našich hafanech a dokládáme výsledky ze zkoušek a z praxe.</p>
+        <p class="muted">Z mnoha majitelů pejsků, kteří s námi začínali, jsou nyní zkušení kynologové, chovatelé, vůdci, myslivci či pouze zodpovědní a spokojení majitelé psů.</p>
+        <p><a class="link" href="o-nas/">Kdo jsme <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Výcvik</span><h2 class="rv" style="--d:.08s">Od školičky pro štěňátka <em>po lovecké zkoušky</em></h2></div>
+      <p class="rv" style="--d:.16s">Hodiny jsou rozdělené podle úrovně psa i typu zkoušek. Náplň, pomůcky a cenu každé hodiny najdete u výcviku i přímo v rozvrhu.</p>
+    </div>
+    <div class="svc"><a class="svc-row rv" href="vycvik/#seznamovaci-prochazka" data-img="assets/img/les-s.jpg">
+  <span class="svc-n">01</span><h3>Seznamovací procházka</h3><p>Popovídáme, probereme vaše představy a seznámíme se s vaším pejskem. Podmínka pro vstup do výcvikových hodin.</p>
+  <span class="svc-price"><b>zdarma</b><small></small></span><span class="svc-arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4"/></svg></span></a><a class="svc-row rv" href="vycvik/#poslusnost" data-img="assets/img/stene-s.jpg">
+  <span class="svc-n">02</span><h3>Skupinový výcvik poslušnosti</h3><p>I lovecký pes musí být vychovaným rodinným společníkem. Od školičky pro štěňátka po pokročilé.</p>
+  <span class="svc-price"><b>250 Kč</b><small>za lekci</small></span><span class="svc-arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4"/></svg></span></a><a class="svc-row rv" href="vycvik/#aporty" data-img="assets/img/aport-bazant-s.jpg">
+  <span class="svc-n">03</span><h3>Aporty</h3><p>Výcvik v přinášení — základ práce loveckého psa, především plemen ohařů a retrívrů.</p>
+  <span class="svc-price"><b>250–350 Kč</b><small>za lekci</small></span><span class="svc-arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4"/></svg></span></a><a class="svc-row rv" href="vycvik/#zkousky" data-img="assets/img/pole-s.jpg">
+  <span class="svc-n">04</span><h3>Příprava k loveckým zkouškám</h3><p>ZN, ZV, OVVR, PZ, SVP, LZ — výcvik pro jednotlivé typy zkoušek dle platných zkušebních řádů.</p>
+  <span class="svc-price"><b>100–500 Kč</b><small>za lekci</small></span><span class="svc-arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4"/></svg></span></a><a class="svc-row rv" href="vycvik/#barvy" data-img="assets/img/cesta-s.jpg">
+  <span class="svc-n">05</span><h3>Práce na barvě a stopě</h3><p>Od úvodní hodiny bez psa po práci na starších a složitějších pobarvených stopách.</p>
+  <span class="svc-price"><b>350–400 Kč</b><small>za lekci</small></span><span class="svc-arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4"/></svg></span></a><a class="svc-row rv" href="vycvik/#individualni" data-img="assets/img/kontakt-psa-s.jpg">
+  <span class="svc-n">06</span><h3>Individuální výcvik</h3><p>Když vám nevyhovují termíny, máte háravou fenku nebo potřebujete doladit disciplíny těsně před zkouškami.</p>
+  <span class="svc-price"><b>dle dohody</b><small></small></span><span class="svc-arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4"/></svg></span></a><a class="svc-row rv" href="sluzby/" data-img="assets/img/vystava-s.jpg">
+  <span class="svc-n">07</span><h3>Výstavy a poradenství</h3><p>Příprava na výstavy, předvedení psa, výběr štěňátka i individuální poradenství.</p>
+  <span class="svc-price"><b>od 350 Kč</b><small></small></span><span class="svc-arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4"/></svg></span></a><a class="svc-row rv" href="vycvik/#teorie" data-img="assets/img/teorie-s.jpg">
+  <span class="svc-n">08</span><h3>Teorie</h3><p>Zkušební řády, výstavní předpisy a úskalí jednotlivých disciplín. Bez psů, se zápisníkem a tužkou.</p>
+  <span class="svc-price"><b>300 Kč</b><small>za lekci</small></span><span class="svc-arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4"/></svg></span></a></div>
+  </div>
+</section>
+
+<section class="section exams" id="zkousky">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Příprava k loveckým zkouškám</span><h2 class="rv" style="--d:.08s">Z gauče <em>do honitby.</em></h2></div>
+      <p class="rv" style="--d:.16s">V menších skupinách dojíždíme do terénů a míst, která jsou pro výcvik vhodná. Vůdce i pejsky seznamujeme s průběhem zkoušek, zkušebními řády a učíme se jednotlivé disciplíny.</p>
+    </div>
+    <div class="exams-grid">
+      <div><div class="exams-sticky"><img src="assets/img/nora.jpg" alt="" data-i="0" class="on" loading="lazy"><img src="assets/img/vlohy.jpg" alt="" data-i="1" class="" loading="lazy"><img src="assets/img/retrivr.jpg" alt="" data-i="2" class="" loading="lazy"><img src="assets/img/pole.jpg" alt="" data-i="3" class="" loading="lazy"><img src="assets/img/vodni-prace.jpg" alt="" data-i="4" class="" loading="lazy"><img src="assets/img/liska.jpg" alt="" data-i="5" class="" loading="lazy"><div class="exams-cap"><span>Hodiny dle platných ZŘ</span><b id="exam-cap">ZN</b></div></div></div>
+      <div class="exam-list"><div class="exam" data-i="0">
+  <div class="exam-img-m"><img src="assets/img/nora-s.jpg" alt="" loading="lazy"></div>
+  <div class="exam-abbr">ZN</div><h3>Zkoušky z norování</h3><p>Nácvik bezkontaktního norování na umělé noře (králík, liška). Cvičení Kladno – Kožova Hora.</p>
+  <div class="exam-meta"><span class="chip">od 6 měsíců</span><span class="chip">norníci — jezevčíci a teriéři</span><span class="chip">skupina neomezeno</span></div></div><div class="exam" data-i="1">
+  <div class="exam-img-m"><img src="assets/img/vlohy-s.jpg" alt="" loading="lazy"></div>
+  <div class="exam-abbr">ZV</div><h3>Zkoušky vloh</h3><p>Práce na divoké či vypouštěné zvěři v terénu. U ohařů nutné zvládnutí povelu down, ovladatelnost na píšťalku a základní poslušnost.</p>
+  <div class="exam-meta"><span class="chip">od 6 měsíců</span><span class="chip">plemeno nerozhoduje</span><span class="chip">do šesti psů</span></div></div><div class="exam" data-i="2">
+  <div class="exam-img-m"><img src="assets/img/retrivr-s.jpg" alt="" loading="lazy"></div>
+  <div class="exam-abbr">OVVR</div><h3>Ověřování vrozených vlastností retrívrů</h3><p>Příprava na zkoušky dle zkušebních řádů, zvěř pro dohledávání bude zajištěna.</p>
+  <div class="exam-meta"><span class="chip">od 6 měsíců</span><span class="chip">retrívři</span><span class="chip">do šesti psů</span></div></div><div class="exam" data-i="3">
+  <div class="exam-img-m"><img src="assets/img/pole-s.jpg" alt="" loading="lazy"></div>
+  <div class="exam-abbr">PZ</div><h3>Podzimní zkoušky — velké a malé pole</h3><p>Práce v terénu na divoké a vypouštěné zvěři, nácvik chování po výstřelu, dohledávky, vlečky, přinášení teplé zvěře. Vypouštěnou zvěř a střelce zajistíme.</p>
+  <div class="exam-meta"><span class="chip">od 9 měsíců</span><span class="chip">plemeno nerozhoduje</span><span class="chip">do čtyř / pěti psů</span></div></div><div class="exam" data-i="4">
+  <div class="exam-img-m"><img src="assets/img/vodni-prace-s.jpg" alt="" loading="lazy"></div>
+  <div class="exam-abbr">SVP</div><h3>Speciální vodní práce</h3><p>Ovladatelnost na píšťalku a perfektní zvládnutí výcviku v přinášení (kozlík). Zvěř bude zajištěna.</p>
+  <div class="exam-meta"><span class="chip">od 9 měsíců</span><span class="chip">plemeno nerozhoduje</span><span class="chip">do šesti psů</span></div></div><div class="exam" data-i="5">
+  <div class="exam-img-m"><img src="assets/img/liska-s.jpg" alt="" loading="lazy"></div>
+  <div class="exam-abbr">LZ</div><h3>Lesní zkoušky</h3><p>Drobné a aportovací disciplíny zvlášť — od kontaktu psa s vůdcem po těžší aporty, vlečky a dohledávky.</p>
+  <div class="exam-meta"><span class="chip">od 9 měsíců</span><span class="chip">plemeno nerozhoduje</span><span class="chip">do pěti / šesti psů</span></div></div>
+        <p style="margin-top:2.4rem"><a class="btn" href="vycvik/#zkousky">Všechny přípravy a pomůcky <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap book-grid">
+    <div>
+      <span class="eyebrow rv">Rozvrh a přihlašování</span>
+      <h2 class="rv" style="font-size:var(--h2);margin-top:1.1rem;--d:.08s">Na hodinu se přihlásíte <em>na dvě kliknutí.</em></h2>
+      <p class="rv muted" style="margin-top:1.2rem;max-width:46ch;--d:.14s">Hodiny do rozvrhu vypisujeme každý týden v neděli/pondělí. Hlaste se prosím na hodiny pro vás určené — a pokud nemůžete dorazit, odhlaste se.</p>
+      <ol class="steps">
+        <li class="rv"><div><b>Zašlete e-mail</b><p>S pár informacemi o Vás, o Vašem pejskovi a Vašich plánech a představách.</p></div></li>
+        <li class="rv" style="--d:.08s"><div><b>Seznamovací procházka</b><p>Pokud přibíráme nové klienty, domluvíme první individuální schůzku a probereme systém našeho výcviku.</p></div></li>
+        <li class="rv" style="--d:.16s"><div><b>Registrace do systému</b><p>Po našem potvrzení se vám otevře rozvrh a můžete se hlásit na hodiny.</p></div></li>
+      </ol>
+      <p class="rv" style="margin-top:1.6rem"><a class="link" href="registrace/">Informace k registraci <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
+    </div>
+    <div class="board rv" style="--d:.1s">
+      <div class="board-float"><span class="st st--booked"></span>Přihlášeno: <b>Brok</b> · Aporty – kozlík</div>
+      <div class="board-top"><b id="board-week">Tento týden</b>
+        <div class="legend"><span class="st st--free">volno</span><span class="st st--wait">čekací listina</span><span class="st st--closed">uzavřeno</span></div></div>
+      <div class="board-days" id="board-days"></div>
+      <div class="board-foot"><span>Ukázka — klikněte na hodinu v rozvrhu</span><a class="btn btn--sm btn--dark" href="rozvrh/">Otevřít rozvrh <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark results">
+  <div class="wrap">
+    <div class="results-top">
+      <div><span class="eyebrow rv">Úspěchy našich oveček</span><h2 class="rv" style="font-size:var(--h2);margin-top:1.1rem;--d:.08s">Nejlepší referencí jsou hafani, kteří dělají <em style="color:var(--lime-2)">páníkům radost.</em></h2></div>
+      <p class="rv muted" style="--d:.16s;max-width:46ch">A také úspěchy našich odchovánků na zkouškách. Ze spousty psů, kteří by strávili jistě spokojený život „na gauči“, se stali právoplatní výborní pomocníci při lovu.</p>
+    </div>
+    <div class="counters">
+      <div class="counter rv"><b data-count="86">86</b><span>psů u nás pravidelně cvičí v roce 2026</span></div>
+      <div class="counter rv" style="--d:.1s"><b data-count="281">281</b><span>absolventů v přehledu úspěšných od roku 2018</span></div>
+      <div class="counter rv" style="--d:.2s"><b data-count="227">227</b><span>dalších v přehledu absolventů do roku 2018</span></div>
+    </div>
+    <div class="wins">
+      <div class="rv"><h3>Úspěšný víkend na všech frontách!</h3><p class="wins-date">Novinky · 15.9.2026</p><p style="margin-top:1.4rem"><a class="link" href="novinky/">Všechny novinky <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a></p></div>
+      <ul><li class="rv" style="--d:0.00s">Na VZ ve II. ceně uspěla kraťaska Gréta.</li><li class="rv" style="--d:0.06s">Na LZ v I. ceně zvládly zkoušky NDO Beggy a MOK Temi, která navíc obsadila krásné 3. místo.</li><li class="rv" style="--d:0.12s">Na VP v I. ceně obstála NDO Stella.</li><li class="rv" style="--d:0.18s">Na PZ v I. ceně uspěli maďarští ohaři West a Dolphin, kteří tímto splnili také poslední podmínku chovnosti.</li><li class="rv" style="--d:0.24s">Na ZN obstál jezevčík Fanda.</li><li class="rv" style="--d:0.30s">Na VZ ostatních plemen v I. ceně obstála parsonka Judy, která s námi byla na víkendu v Kašperkách.</li></ul>
+    </div>
+  </div>
+  <div class="dogs" aria-label="Naši absolventi"><article class="dog"><div class="dog-img"><img src="assets/abs/dc405ecc8f84.jpg" alt="Abrakadabra Zannanza „Kimi“" loading="lazy"></div>
+<div class="dog-body"><b>Abrakadabra Zannanza „Kimi“</b><small>Panička Renata Masařová</small><div class="dog-res"><span>ZV - I. cena</span><span>PZ - I. cena</span><span>SVP - II. cena</span><span>LZ - II. cena</span></div></div></article><article class="dog"><div class="dog-img"><img src="assets/abs/0c9cbea82966.jpg" alt="Alžběta od Lilian" loading="lazy"></div>
+<div class="dog-body"><b>Alžběta od Lilian</b><small>Panička Hanka Dudáčková</small><div class="dog-res"><span>ZV - I. cena</span><span>PZ - I. cena, vítěz</span><span>MJM - I. cena</span></div></div></article><article class="dog"><div class="dog-img"><img src="assets/abs/2a2a83ff3f45.jpg" alt="Archie Angelic dream" loading="lazy"></div>
+<div class="dog-body"><b>Archie Angelic dream</b><small>Panička Věra Štefánková</small><div class="dog-res"><span>ZV - I. cena</span><span>PZ - I. cena</span><span>SVP - I. cena</span></div></div></article><article class="dog"><div class="dog-img"><img src="assets/abs/4dd4e41e6705.jpg" alt="Atos z Kovářových strouh" loading="lazy"></div>
+<div class="dog-body"><b>Atos z Kovářových strouh</b><small>Panička Věra Lišková</small><div class="dog-res"><span>ZN - obstál</span><span>ZV - I. cena</span><span>BZ - III. cena</span></div></div></article><article class="dog"><div class="dog-img"><img src="assets/abs/db4b1d595fc8.jpg" alt="Bonaparte Chanson de Glace" loading="lazy"></div>
+<div class="dog-body"><b>Bonaparte Chanson de Glace</b><small>Panička Monika Füleová</small><div class="dog-res"><span>BZ - II. cena</span><span>ZV - III.cena</span><span>KBZH - I.cena, CACT</span></div></div></article><article class="dog"><div class="dog-img"><img src="assets/abs/55648b41b5fc.jpg" alt="Celestýna ze Žárovské tkalcovny" loading="lazy"></div>
+<div class="dog-body"><b>Celestýna ze Žárovské tkalcovny</b><small>Panička Lenka Kindlová</small><div class="dog-res"><span>ZV - I. cena, vítěz</span><span>Pohár Polabí (KPZ) - II.cena</span><span>PZ - I. cena, 3. místo</span><span>VP - I. cena</span></div></div></article><article class="dog"><div class="dog-img"><img src="assets/abs/e898aa3131da.jpg" alt="Desmond Bayetty" loading="lazy"></div>
+<div class="dog-body"><b>Desmond Bayetty</b><small>Páníček Richard Martinec</small><div class="dog-res"><span>ZV - I. cena</span><span>PZ - I. cena</span><span>VP - I. cena</span><span>LZ - I. cena</span></div></div></article><article class="dog"><div class="dog-img"><img src="assets/abs/89f25450c01f.jpg" alt="Freja z Louštínského vrchu" loading="lazy"></div>
+<div class="dog-body"><b>Freja z Louštínského vrchu</b><small>Panička Lucie Čížková</small><div class="dog-res"><span>KZV - I. cena</span><span>PZ - I. cena, 2. místo</span><span>VP - I.cena, 3.místo</span></div></div></article><article class="dog"><div class="dog-img"><img src="assets/abs/d9b26970523d.jpg" alt="„U“ Ikina z Měsíční pláně „Kiki“" loading="lazy"></div>
+<div class="dog-body"><b>„U“ Ikina z Měsíční pláně „Kiki“</b><small>Panička Nora Králová</small><div class="dog-res"><span>OVVR - prospěch</span><span>VP - I. cena</span><span>PZ - I. cena</span><span>KPZ - 2 x II. cena</span></div></div></article><article class="dog"><div class="dog-img"><img src="assets/abs/6c93a24528ab.jpg" alt="Nábis of Volcan jase o Cotopaxi „Jase“" loading="lazy"></div>
+<div class="dog-body"><b>Nábis of Volcan jase o Cotopaxi „Jase“</b><small>Panička Jana Mašková</small><div class="dog-res"><span>ZV - II. cena, 2.místo</span><span>5 x BZH - I. cena, I. cena, 3x CACT, 2x vítěz, 2. místo, II. cena a 3. místo</span><span>ZVVZ - I.cena</span><span>BZ - II.cena</span></div></div></article></div>
+  <div class="wrap" style="margin-top:2rem"><a class="btn btn--ghost" href="klienti/">Galerie úspěšných absolventů <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a></div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Kalendář akcí 2026</span><h2 class="rv" style="--d:.08s">Víkendy, tábory <em>a přednášky</em></h2></div>
+      <p class="rv" style="--d:.16s">Pobytové přípravy na zkoušky, výcvikový tábor, semináře i přednášky pro všechny majitele a chovatele psů. Počet psů je vždy omezen.</p>
+    </div>
+    <div class="events">
+      <a class="ev-feature rv" href="akce/#tabor"><img src="assets/img/tabor.jpg" srcset="assets/img/tabor-s.jpg 900w, assets/img/tabor.jpg 1600w" sizes="(max-width: 767px) 100vw, 60vw" alt="Účastníci výcvikového tábora se psy" class="" loading="lazy" decoding="async">
+        <div class="ev-feature-body"><span class="tag">18.–25. 9. 2026</span><h3>Výcvikový tábor</h3><p>Lučkovice. Pro všechny úrovně výcviku.</p></div></a>
+      <ul class="ev-list" id="home-events"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" style="padding-top:clamp(4rem,8vw,7rem)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Galerie</span><h2 class="rv" style="--d:.08s">Z výcviku <em>a zkoušek</em></h2></div>
+      <p class="rv" style="--d:.16s">Fotečky z víkendů, táborů a zkoušek průběžně přidáváme do galerie na Rajčeti. <a class="link" href="https://loveckyvycvikcz.rajce.idnes.cz/" target="_blank" rel="noopener">Otevřít galerii <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
+    </div>
+    <div class="bento">
+      <figure class="b1 rv"><img src="assets/img/vodni-prace.jpg" srcset="assets/img/vodni-prace-s.jpg 900w, assets/img/vodni-prace.jpg 1600w" sizes="(max-width: 767px) 100vw, 60vw" alt="Pes skáče do vody" class="" loading="lazy" decoding="async"><figcaption>Vodní práce</figcaption></figure>
+      <figure class="b2 rv" style="--d:.08s"><img src="assets/img/vystava-s.jpg" alt="Oceněné psy na výstavě" class="" loading="lazy" decoding="async"><figcaption>Výstavy</figcaption></figure>
+      <figure class="b3 rv" style="--d:.16s"><img src="assets/img/nastup-s.jpg" alt="Nástup psů a vůdců na zkouškách" class="" loading="lazy" decoding="async"><figcaption>Zkoušky</figcaption></figure>
+      <figure class="b4 rv"><img src="assets/img/teorie-s.jpg" alt="Výklad s jezevčíkem" class="" loading="lazy" decoding="async"><figcaption>Teorie v praxi</figcaption></figure>
+      <figure class="b5 rv" style="--d:.08s"><img src="assets/img/voditko-s.jpg" alt="Malý münsterlandský ohař na vodítku" class="" loading="lazy" decoding="async"><figcaption>Poslušnost</figcaption></figure>
+      <figure class="b6 rv" style="--d:.16s"><img src="assets/img/rybnik-s.jpg" alt="Výcvik u rybníka" class="" loading="lazy" decoding="async"><figcaption>U vody</figcaption></figure>
+    </div>
+  </div>
+</section>
+</main>
+<section class="section dark cta">
+  <div class="cta-mark" aria-hidden="true"><img src="assets/logo-light.svg" alt=""></div>
+  <div class="wrap cta-grid">
+    <div class="rv">
+      <span class="eyebrow">Jak s námi začít</span>
+      <h2 style="margin-top:1.2rem">Napište nám pár informací o&nbsp;Vás, o&nbsp;Vašem pejskovi <em>a&nbsp;Vašich plánech.</em></h2>
+      <a class="cta-mail" href="mailto:info@loveckyvycvik.cz">info@loveckyvycvik.cz</a>
+    </div>
+    <dl class="cta-side rv" style="--d:.15s">
+      <div><dt>Telefon</dt><dd><a href="tel:+420777717271">+420 777 717 271</a></dd></div>
+      <div><dt>Kde cvičíme</dt><dd>Nebušice · Hájovna Mrákavy · honitby poblíž Prahy</dd></div>
+      <div><dt>Další krok</dt><dd><a class="link" href="registrace/">Jak s námi začít <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a></dd></div>
+    </dl>
+  </div>
+</section>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="assets/logo-light.svg" alt="Lovecký výcvik psích plemen" width="110" height="115">
+        <p style="margin-top:1.4rem;max-width:34ch">Výcvik, cvičení a příprava k loveckým zkouškám všech loveckých plemen.</p>
+        <div class="foot-partners">
+          <a class="partner" href="https://www.lvshop.cz" target="_blank" rel="noopener"><span><b>LV Shop</b><small>pomůcky k prodeji · lvshop.cz</small></span></a>
+          <a class="partner" href="https://www.facebook.com/Odczechu" target="_blank" rel="noopener"><span><b>Chovatelská stanice Od Czechu</b><small>na Facebooku</small></span></a>
+        </div>
+      </div>
+      <div>
+        <h4>Výcvik</h4>
+        <ul>
+          <li><a href="vycvik/#seznamovaci-prochazka">Seznamovací procházka</a></li>
+          <li><a href="vycvik/#poslusnost">Skupinový výcvik poslušnosti</a></li>
+          <li><a href="vycvik/#aporty">Aporty</a></li>
+          <li><a href="vycvik/#zkousky">Příprava k loveckým zkouškám</a></li>
+          <li><a href="vycvik/#individualni">Individuální výcvik</a></li>
+          <li><a href="sluzby/">Výstavy a poradenství</a></li>
+          <li><a href="vycvik/#teorie">Teorie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pro cvičence</h4>
+        <ul>
+          <li><a href="registrace/">Informace k registraci</a></li>
+          <li><a href="rozvrh/">Rozvrh cvičení</a></li>
+          <li><a href="akce/">Kalendář akcí</a></li>
+          <li><a href="cenik/">Ceník</a></li>
+          <li><a href="klienti/">Cvičí u nás · Absolventi</a></li>
+          <li><a href="kontakt/#dokumenty">Předpisy, řády, termíny</a></li>
+          <li><a href="https://loveckyvycvikcz.rajce.idnes.cz/" target="_blank" rel="noopener">Galerie na Rajčeti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>LoveckyVycvik s.r.o.</li>
+          <li>Kamenné Žehrovice 37, 273 01</li>
+          <li>IČO: 225 44 496</li>
+          <li><a href="mailto:info@loveckyvycvik.cz">info@loveckyvycvik.cz</a></li>
+          <li><a href="tel:+420777717271">+420 777 717 271</a></li>
+          <li><a href="https://www.facebook.com/loveckyvycvik.cz/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 LoveckyVycvik s.r.o.</span><span>Návrh nového webu · ukázka</span></div>
+  </div>
+</footer>
+<div class="preview" aria-hidden="true"><img alt=""></div>
+<script src="assets/app.js?v=31257b9b" defer></script>
+<script src="assets/schedule.js?v=cf960a34" defer></script>
+<script src="assets/home.js?v=b6db6966" defer></script>
+</body>
+</html>

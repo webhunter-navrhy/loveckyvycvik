@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registrace — Lovecký výcvik psích plemen</title>
+<meta name="description" content="Jak s námi začít cvičit: e-mail, seznamovací procházka a registrace do systému rozvrhu.">
+<meta name="theme-color" content="#062A09">
+<meta property="og:title" content="Registrace — Lovecký výcvik psích plemen">
+<meta property="og:description" content="Jak s námi začít cvičit: e-mail, seznamovací procházka a registrace do systému rozvrhu.">
+<meta property="og:image" content="../assets/img/hero.jpg">
+<link rel="icon" href="../assets/logo-color.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Hanken+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=862cd382">
+</head>
+<body class="">
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="../" aria-label="Lovecký výcvik — úvod"><img class="lg lg-on-dark " src="../assets/logo-light.svg" alt="Lovecký výcvik psích plemen" width="120" height="125"><img class="lg lg-on-light " src="../assets/logo-color.svg" alt="" aria-hidden="true" width="120" height="125"></a>
+    <ul class="nav-links"><li><a href="../vycvik/">Výcvik</a></li><li><a href="../rozvrh/">Rozvrh</a></li><li><a href="../akce/">Kalendář akcí</a></li><li><a href="../cenik/">Ceník</a></li><li><a href="../klienti/">Klienti</a></li><li><a href="../o-nas/">O nás</a></li><li><a href="../novinky/">Novinky</a></li><li><a href="../kontakt/">Kontakt</a></li></ul>
+    <div class="nav-cta">
+      <a class="btn btn--ghost" href="../rozvrh/">Přihlásit se</a>
+      <a class="btn" href="../registrace/">Registrace</a>
+    </div>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="drawer-menu" aria-hidden="true">
+  <ul><li><a href="../vycvik/">Výcvik<small>01</small></a></li><li><a href="../rozvrh/">Rozvrh<small>02</small></a></li><li><a href="../akce/">Kalendář akcí<small>03</small></a></li><li><a href="../cenik/">Ceník<small>04</small></a></li><li><a href="../klienti/">Klienti<small>05</small></a></li><li><a href="../o-nas/">O nás<small>06</small></a></li><li><a href="../novinky/">Novinky<small>07</small></a></li><li><a href="../kontakt/">Kontakt<small>08</small></a></li></ul>
+  <div class="drawer-foot"><a class="btn" href="../registrace/">Registrace</a><a class="btn btn--ghost" href="../rozvrh/">Přihlásit se</a><a class="btn btn--ghost" href="tel:+420777717271">777 717 271</a></div>
+</div>
+<main>
+<section class="phead phead--img"><img src="../assets/img/nastup-zima.jpg" srcset="../assets/img/nastup-zima-s.jpg 900w, ../assets/img/nastup-zima.jpg 1600w" sizes="(max-width: 767px) 100vw, 60vw" alt="" class="" fetchpriority="high" decoding="async">
+  <div class="wrap"><nav class="crumbs" aria-label="Drobečková navigace"><a href="../">Úvod</a><span>/</span><span>Registrace</span></nav><h1 class="rv in">Jak s námi <em>začít cvičit</em></h1><p class="phead-lead">Ideální postup, jak se k nám přidat: e-mail s pár informacemi, seznamovací procházka a potom registrace do systému.</p></div></section>
+<section class="section">
+  <div class="wrap reg-grid">
+    <div>
+      <div class="note note--warn"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.3" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6.2v.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span><b>Aktuálně:</b> vzhledem k naplnění kapacity nyní nebereme nové zájemce o výcvik. Děkujeme za pochopení. Formulář níže ukazuje, jak bude registrace fungovat, až se místa uvolní.</span></div>
+      <ol class="steps" style="margin-top:2rem">
+        <li><div><b>Zašlete e-mail</b><p>S pár informacemi o Vás, o Vašem pejskovi a Vašich plánech a představách. E-mailem budete informováni o možnostech a volné kapacitě.</p></div></li>
+        <li><div><b>Seznamovací procházka</b><p>Pokud přibíráme nové klienty, domluvíme si první termín individuální schůzky, kde probereme podrobnosti, systém našeho výcviku a zodpovíme případné dotazy.</p></div></li>
+        <li><div><b>Registrace do systému</b><p>Vyplňte požadované údaje. Přístup do rozvrhu je povolen až na základě našeho zpětného potvrzení (tzn. ne ihned po odeslání údajů).</p></div></li>
+      </ol>
+      <div class="pull">Pokud se nenajdete v seznamu našich „oveček“ a přejete si tam být, dejte nám prosím vědět a vše napravíme.</div>
+    </div>
+
+    <div class="form-card" id="reg">
+      <ol class="progress" aria-hidden="true"><li class="on"><i>1</i><span>Vy</span></li><li><i>2</i><span>Váš pes</span></li><li><i>3</i><span>Plány a souhlas</span></li></ol>
+      <form id="reg-form" novalidate>
+        <div class="fstep on" data-step="0">
+          <h2>Údaje o vás</h2><p>Telefon potřebujeme hlavně kvůli SMS, když kvůli počasí rušíme hodinu.</p>
+          <div class="fields">
+            <div class="field field--full"><label for="f-name">Jméno a příjmení <em>*</em></label><input id="f-name" name="jmeno" autocomplete="name" required><span class="msg">Vyplňte prosím jméno.</span></div>
+            <div class="field"><label for="f-mail">E-mail <em>*</em></label><input id="f-mail" name="email" type="email" autocomplete="email" required><span class="msg">Zadejte platný e-mail.</span></div>
+            <div class="field"><label for="f-tel">Telefon <em>*</em></label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" placeholder="+420" required><span class="msg">Zadejte telefon.</span></div>
+            <div class="field"><label for="f-pw">Heslo <em>*</em></label><input id="f-pw" name="heslo" type="password" autocomplete="new-password" minlength="8" required><span class="hint">Alespoň 8 znaků.</span><span class="msg">Heslo musí mít alespoň 8 znaků.</span></div>
+            <div class="field"><label for="f-pw2">Heslo znovu <em>*</em></label><input id="f-pw2" name="heslo2" type="password" autocomplete="new-password" required><span class="msg">Hesla se neshodují.</span></div>
+          </div>
+        </div>
+        <div class="fstep" data-step="1">
+          <h2>Váš pes</h2><p>Máte ve smečce víc psů? Přidejte je všechny — na hodiny pak přihlašujete každého zvlášť.</p>
+          <div class="fields" id="dogs"></div>
+        </div>
+        <div class="fstep" data-step="2">
+          <h2>Plány a představy</h2><p>Podle toho vám doporučíme vhodnou skupinu.</p>
+          <div class="fields">
+            <div class="field field--full"><span class="lbl">Co vás zajímá</span><div class="checks"><label><input type="checkbox" name="zajem" value="Školička pro štěňátka">Školička pro štěňátka</label><label><input type="checkbox" name="zajem" value="Skupinový výcvik poslušnosti">Skupinový výcvik poslušnosti</label><label><input type="checkbox" name="zajem" value="Aporty">Aporty</label><label><input type="checkbox" name="zajem" value="Příprava k loveckým zkouškám">Příprava k loveckým zkouškám</label><label><input type="checkbox" name="zajem" value="Práce na barvě a stopě">Práce na barvě a stopě</label><label><input type="checkbox" name="zajem" value="Individuální výcvik">Individuální výcvik</label><label><input type="checkbox" name="zajem" value="Náprava problémového chování">Náprava problémového chování</label><label><input type="checkbox" name="zajem" value="Příprava na výstavy">Příprava na výstavy</label><label><input type="checkbox" name="zajem" value="Teorie">Teorie</label><label><input type="checkbox" name="zajem" value="Poradenství — výběr psa">Poradenství — výběr psa</label></div></div>
+            <div class="field field--full"><label for="f-exam">Chystáte se na zkoušky?</label><select id="f-exam" name="zkousky"><option value="">— vyberte —</option><option>ZN</option><option>ZV</option><option>OVVR</option><option>PZ</option><option>SVP</option><option>VP</option><option>LZ</option><option>zatím nevím</option></select></div>
+            <div class="field field--full"><label for="f-msg">Pár slov o vás a vašem pejskovi</label><textarea id="f-msg" name="zprava" placeholder="Jaké máte plány a představy, co už pes umí, s čím potřebujete pomoct…"></textarea></div>
+            <div class="field field--full">
+              <label class="consent"><input type="checkbox" name="souhlas" required><span>Souhlasím se zpracováním uvedených údajů pro potřeby vedení výcviku. <em style="color:var(--closed);font-style:normal">*</em></span></label>
+              <label class="consent"><input type="checkbox" name="seznam"><span>Souhlasím s uvedením mého jména a jména mého psa v seznamu cvičenců na webu. Pro uvedení do seznamu absolventů (po absolvování zkoušek) pošlu fotografii.</span></label>
+              <span class="msg">Bez souhlasu se zpracováním údajů registraci nelze odeslat.</span>
+            </div>
+          </div>
+        </div>
+        <div class="fnav" id="fnav"><button type="button" class="btn btn--ghost btn--sm" id="f-back" hidden>← Zpět</button><small>Pole s <span style="color:var(--closed)">*</span> jsou povinná</small><button type="submit" class="btn btn--dark" id="f-next">Pokračovat <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
+      </form>
+      <div class="done-box" id="done">
+        <div class="done-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2"/></svg></div>
+        <h2>Děkujeme, registrace je připravena.</h2>
+        <p>V ostrém provozu by teď registrace čekala na potvrzení. Přístup do rozvrhu povolíme po schválení a dáme vám vědět e-mailem.</p>
+        <div class="summary" id="summary"></div>
+        <p style="font-size:.82rem"><b>Ukázka:</b> formulář v návrhu nic neodesílá.</p>
+        <p style="margin-top:1.6rem"><a class="btn" href="../rozvrh/">Prohlédnout rozvrh <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<section class="section dark cta">
+  <div class="cta-mark" aria-hidden="true"><img src="../assets/logo-light.svg" alt=""></div>
+  <div class="wrap cta-grid">
+    <div class="rv">
+      <span class="eyebrow">Jak s námi začít</span>
+      <h2 style="margin-top:1.2rem">Napište nám pár informací o&nbsp;Vás, o&nbsp;Vašem pejskovi <em>a&nbsp;Vašich plánech.</em></h2>
+      <a class="cta-mail" href="mailto:info@loveckyvycvik.cz">info@loveckyvycvik.cz</a>
+    </div>
+    <dl class="cta-side rv" style="--d:.15s">
+      <div><dt>Telefon</dt><dd><a href="tel:+420777717271">+420 777 717 271</a></dd></div>
+      <div><dt>Kde cvičíme</dt><dd>Nebušice · Hájovna Mrákavy · honitby poblíž Prahy</dd></div>
+      <div><dt>Další krok</dt><dd><a class="link" href="../registrace/">Jak s námi začít <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.4"/></svg></a></dd></div>
+    </dl>
+  </div>
+</section>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="../assets/logo-light.svg" alt="Lovecký výcvik psích plemen" width="110" height="115">
+        <p style="margin-top:1.4rem;max-width:34ch">Výcvik, cvičení a příprava k loveckým zkouškám všech loveckých plemen.</p>
+        <div class="foot-partners">
+          <a class="partner" href="https://www.lvshop.cz" target="_blank" rel="noopener"><span><b>LV Shop</b><small>pomůcky k prodeji · lvshop.cz</small></span></a>
+          <a class="partner" href="https://www.facebook.com/Odczechu" target="_blank" rel="noopener"><span><b>Chovatelská stanice Od Czechu</b><small>na Facebooku</small></span></a>
+        </div>
+      </div>
+      <div>
+        <h4>Výcvik</h4>
+        <ul>
+          <li><a href="../vycvik/#seznamovaci-prochazka">Seznamovací procházka</a></li>
+          <li><a href="../vycvik/#poslusnost">Skupinový výcvik poslušnosti</a></li>
+          <li><a href="../vycvik/#aporty">Aporty</a></li>
+          <li><a href="../vycvik/#zkousky">Příprava k loveckým zkouškám</a></li>
+          <li><a href="../vycvik/#individualni">Individuální výcvik</a></li>
+          <li><a href="../sluzby/">Výstavy a poradenství</a></li>
+          <li><a href="../vycvik/#teorie">Teorie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pro cvičence</h4>
+        <ul>
+          <li><a href="../registrace/">Informace k registraci</a></li>
+          <li><a href="../rozvrh/">Rozvrh cvičení</a></li>
+          <li><a href="../akce/">Kalendář akcí</a></li>
+          <li><a href="../cenik/">Ceník</a></li>
+          <li><a href="../klienti/">Cvičí u nás · Absolventi</a></li>
+          <li><a href="../kontakt/#dokumenty">Předpisy, řády, termíny</a></li>
+          <li><a href="https://loveckyvycvikcz.rajce.idnes.cz/" target="_blank" rel="noopener">Galerie na Rajčeti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>LoveckyVycvik s.r.o.</li>
+          <li>Kamenné Žehrovice 37, 273 01</li>
+          <li>IČO: 225 44 496</li>
+          <li><a href="mailto:info@loveckyvycvik.cz">info@loveckyvycvik.cz</a></li>
+          <li><a href="tel:+420777717271">+420 777 717 271</a></li>
+          <li><a href="https://www.facebook.com/loveckyvycvik.cz/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 LoveckyVycvik s.r.o.</span><span>Návrh nového webu · ukázka</span></div>
+  </div>
+</footer>
+<div class="preview" aria-hidden="true"><img alt=""></div>
+<script src="../assets/app.js?v=31257b9b" defer></script>
+<script src="../assets/registrace.js?v=187fa98a" defer></script>
+</body>
+</html>

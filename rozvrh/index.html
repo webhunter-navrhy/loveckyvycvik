@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rozvrh cvičení — Lovecký výcvik psích plemen</title>
+<meta name="description" content="Týdenní rozvrh hodin výcviku: přihlašování psů na hodiny, čekací listina, odhlášení. Ukázka nového systému.">
+<meta name="theme-color" content="#062A09">
+<meta property="og:title" content="Rozvrh cvičení — Lovecký výcvik psích plemen">
+<meta property="og:description" content="Týdenní rozvrh hodin výcviku: přihlašování psů na hodiny, čekací listina, odhlášení. Ukázka nového systému.">
+<meta property="og:image" content="../assets/img/hero.jpg">
+<link rel="icon" href="../assets/logo-color.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Hanken+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=862cd382">
+</head>
+<body class="page-light">
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="../" aria-label="Lovecký výcvik — úvod"><img class="lg lg-on-dark " src="../assets/logo-light.svg" alt="Lovecký výcvik psích plemen" width="120" height="125"><img class="lg lg-on-light " src="../assets/logo-color.svg" alt="" aria-hidden="true" width="120" height="125"></a>
+    <ul class="nav-links"><li><a href="../vycvik/">Výcvik</a></li><li><a href="../rozvrh/" aria-current="page">Rozvrh</a></li><li><a href="../akce/">Kalendář akcí</a></li><li><a href="../cenik/">Ceník</a></li><li><a href="../klienti/">Klienti</a></li><li><a href="../o-nas/">O nás</a></li><li><a href="../novinky/">Novinky</a></li><li><a href="../kontakt/">Kontakt</a></li></ul>
+    <div class="nav-cta">
+      <a class="btn btn--ghost" href="../rozvrh/">Přihlásit se</a>
+      <a class="btn" href="../registrace/">Registrace</a>
+    </div>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="drawer-menu" aria-hidden="true">
+  <ul><li><a href="../vycvik/">Výcvik<small>01</small></a></li><li><a href="../rozvrh/">Rozvrh<small>02</small></a></li><li><a href="../akce/">Kalendář akcí<small>03</small></a></li><li><a href="../cenik/">Ceník<small>04</small></a></li><li><a href="../klienti/">Klienti<small>05</small></a></li><li><a href="../o-nas/">O nás<small>06</small></a></li><li><a href="../novinky/">Novinky<small>07</small></a></li><li><a href="../kontakt/">Kontakt<small>08</small></a></li></ul>
+  <div class="drawer-foot"><a class="btn" href="../registrace/">Registrace</a><a class="btn btn--ghost" href="../rozvrh/">Přihlásit se</a><a class="btn btn--ghost" href="tel:+420777717271">777 717 271</a></div>
+</div>
+<main>
+
+<section class="app-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="../">Úvod</a><span>/</span><span>Rozvrh cvičení</span></nav>
+    <div class="app-top">
+      <h1>Rozvrh <em>cvičení</em></h1>
+      <div class="acc" id="acc"></div>
+    </div>
+    <div class="demo-banner"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.3" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6.2v.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span><b>Ukázka nového přihlašovacího systému.</b> Termíny a obsazenost jsou ilustrační, přihlášení se nikam neodesílá — zkuste si hodinu vybrat, přihlásit psa, zapsat se na čekací listinu i odhlásit.</span></div>
+  </div>
+</section>
+<div class="toolbar"><div class="wrap toolbar-in">
+  <div class="weeknav"><button id="wk-prev" aria-label="Předchozí týden">←</button><b id="wk-label">…</b><button id="wk-next" aria-label="Další týden">→</button></div>
+  <div class="filters" id="filters"></div>
+  <button class="btn btn--sm btn--dark mybtn" id="my-open">Moje přihlášky <span class="badge" id="my-count" hidden>0</span></button>
+</div></div>
+<section><div class="wrap"><div class="week" id="week" aria-live="polite"></div></div></section>
+<section><div class="wrap app-foot">
+  <div class="rule"><h3>Barevné značky</h3>
+    <div class="legend"><span class="st st--free">hodina je volná</span><span class="st st--wait">hodina je plná — lze se zapsat na čekací listinu</span><span class="st st--closed">přihlašování je uzavřeno</span><span class="st st--booked">jste přihlášeni</span></div></div>
+  <div class="rule"><h3>Nemůžete dorazit?</h3><p>Pokud se na hodinu přihlásíte a nemůžete nakonec dorazit, odhlaste se. Na některá cvičení je nutná příprava předem, tak ať zbytečně nelítáme po lese. Někdy máme za vás náhradníka.</p></div>
+  <div class="rule"><h3>Cvičení versus počasí</h3><p>V případě, že je nevhodné počasí (prší, sněží atd.), dáváme vědět cca hodinku předem. Ideálně pomocí SMS, pokud na vás nemáme telefon, tak píšeme e-mail. Ne vždy však je déšť na závadu :-).</p></div>
+</div></section>
+
+<div class="scrim" id="scrim"></div>
+<aside class="panel" id="panel" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="panel-title">
+  <div class="panel-h"><span class="eyebrow" id="panel-eyebrow">Hodina</span><button class="panel-x" id="panel-x" aria-label="Zavřít">✕</button></div>
+  <div class="panel-b" id="panel-b"></div>
+  <div class="panel-f" id="panel-f"></div>
+</aside>
+<div class="toast" id="toast" role="status"><i></i><span></span></div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="../assets/logo-light.svg" alt="Lovecký výcvik psích plemen" width="110" height="115">
+        <p style="margin-top:1.4rem;max-width:34ch">Výcvik, cvičení a příprava k loveckým zkouškám všech loveckých plemen.</p>
+        <div class="foot-partners">
+          <a class="partner" href="https://www.lvshop.cz" target="_blank" rel="noopener"><span><b>LV Shop</b><small>pomůcky k prodeji · lvshop.cz</small></span></a>
+          <a class="partner" href="https://www.facebook.com/Odczechu" target="_blank" rel="noopener"><span><b>Chovatelská stanice Od Czechu</b><small>na Facebooku</small></span></a>
+        </div>
+      </div>
+      <div>
+        <h4>Výcvik</h4>
+        <ul>
+          <li><a href="../vycvik/#seznamovaci-prochazka">Seznamovací procházka</a></li>
+          <li><a href="../vycvik/#poslusnost">Skupinový výcvik poslušnosti</a></li>
+          <li><a href="../vycvik/#aporty">Aporty</a></li>
+          <li><a href="../vycvik/#zkousky">Příprava k loveckým zkouškám</a></li>
+          <li><a href="../vycvik/#individualni">Individuální výcvik</a></li>
+          <li><a href="../sluzby/">Výstavy a poradenství</a></li>
+          <li><a href="../vycvik/#teorie">Teorie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pro cvičence</h4>
+        <ul>
+          <li><a href="../registrace/">Informace k registraci</a></li>
+          <li><a href="../rozvrh/">Rozvrh cvičení</a></li>
+          <li><a href="../akce/">Kalendář akcí</a></li>
+          <li><a href="../cenik/">Ceník</a></li>
+          <li><a href="../klienti/">Cvičí u nás · Absolventi</a></li>
+          <li><a href="../kontakt/#dokumenty">Předpisy, řády, termíny</a></li>
+          <li><a href="https://loveckyvycvikcz.rajce.idnes.cz/" target="_blank" rel="noopener">Galerie na Rajčeti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>LoveckyVycvik s.r.o.</li>
+          <li>Kamenné Žehrovice 37, 273 01</li>
+          <li>IČO: 225 44 496</li>
+          <li><a href="mailto:info@loveckyvycvik.cz">info@loveckyvycvik.cz</a></li>
+          <li><a href="tel:+420777717271">+420 777 717 271</a></li>
+          <li><a href="https://www.facebook.com/loveckyvycvik.cz/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 LoveckyVycvik s.r.o.</span><span>Návrh nového webu · ukázka</span></div>
+  </div>
+</footer>
+<div class="preview" aria-hidden="true"><img alt=""></div>
+<script src="../assets/app.js?v=31257b9b" defer></script>
+<script src="../assets/schedule.js?v=cf960a34" defer></script>
+<script src="../assets/rozvrh.js?v=fb7b267a" defer></script>
+</body>
+</html>
